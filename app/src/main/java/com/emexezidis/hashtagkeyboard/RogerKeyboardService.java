@@ -10,10 +10,10 @@ import android.view.inputmethod.InputConnection;
 
 public class RogerKeyboardService extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
-    public final static int insertHashtagButton = 257;
+    public final static int insertRogerButton = 257;
     public final static int editHashtagButton = 258;
 
-    private String hashtags;
+    private String roger;
     private InputConnection ic;
 
     Intent intent;
@@ -30,7 +30,7 @@ public class RogerKeyboardService extends InputMethodService implements Keyboard
         kv.setPreviewEnabled(false);
         kv.setOnKeyboardActionListener(this);
 
-        hashtags = "";
+        roger = "";
 
         return kv;
     }
@@ -72,10 +72,10 @@ public class RogerKeyboardService extends InputMethodService implements Keyboard
                 }
                 break;
 
-            case insertHashtagButton:
+            case insertRogerButton:
 
-                hashtags = getCurrentHashtags();
-                ic.commitText(hashtags, 1);
+                roger = getCurrentHashtags();
+                ic.commitText(roger, 1);
                 break;
 
             default:
@@ -85,8 +85,8 @@ public class RogerKeyboardService extends InputMethodService implements Keyboard
     private String getCurrentHashtags() {
 
         SharedPreferences sharedPref = getSharedPreferences(MainActivity.HASHTAG_KEYBOARD_PREF_NAME, 0);
-        hashtags = sharedPref.getString("hashtags", "#click #edit #button");
-        return (hashtags);
+        roger = sharedPref.getString("hashtags", "#click #edit #button");
+        return (roger);
     }
 
     private int checkForLengthToDelete() {

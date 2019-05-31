@@ -19,7 +19,7 @@
         <activity android:name=".ScreenSlidePagerActivity"/>
 
         <service
-            android:name=".HashKeyboardService"
+            android:name=".RogerKeyboardService"
             android:label="@string/ime_name"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <meta-data

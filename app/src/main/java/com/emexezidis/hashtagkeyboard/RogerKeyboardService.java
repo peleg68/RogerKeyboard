@@ -8,7 +8,7 @@ import android.inputmethodservice.KeyboardView;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
-public class HashKeyboardService extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
+public class RogerKeyboardService extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
     public final static int insertHashtagButton = 257;
     public final static int editHashtagButton = 258;

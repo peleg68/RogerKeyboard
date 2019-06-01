@@ -84,7 +84,7 @@ public class PopupFragment extends Fragment implements AdapterView.OnItemSelecte
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String selectedRogerword =parent.getItemAtPosition(position).toString();
+        String selectedRogerword = parent.getItemAtPosition(position).toString();
         managingActivity.saveSharedPreference("hashtags", selectedRogerword);
         showSnackbar("Selected procedure word is: `" + selectedRogerword + "`");
     }

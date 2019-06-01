@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Hashboard</string>
-    <string name="simple_ime">#board</string>
-    <string name="subtype_en_US">English (US)</string>
+    <string name="app_name">Roger Keyboard</string>
+    <string name="ime_name">Roger Keyboard</string>
+    <string name="subtype_en_US">Hashtagese</string>
+    <string name="main_screen_title">Choose your weapon:</string>
+    <string name="hashtags_edittext">#hashtags</string>
+    <string-array name="roger_words_array">
+        <item>רות</item>
+        <item>Roger</item>
+    </string-array>
+    <string name="save">Save</string>
+    <string name="hashtagify_button">Hashtagify</string>
+    <string name="title_activity_first_run">FirstRun</string>
 </resources>

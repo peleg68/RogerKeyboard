@@ -7,12 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class PopupFragment extends Fragment{
+public class PopupFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private EditText editText;
     private Spinner wordSpinner;
@@ -43,8 +44,8 @@ public class PopupFragment extends Fragment{
         editText.setText(managingActivity.getSharedPreferenceString("hashtags"));
 
         wordSpinner = view.findViewById(R.id.word_spinner);
-        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(
-                this,
+        final ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(
+                this.managingActivity,
                 R.array.roger_words_array,
                 android.R.layout.simple_spinner_item
         );
@@ -52,6 +53,8 @@ public class PopupFragment extends Fragment{
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         wordSpinner.setAdapter(arrayAdapter);
+
+        wordSpinner.setOnItemSelectedListener(this);
 
 
         Button save = (Button) view.findViewById(R.id.saveButton);
@@ -78,5 +81,13 @@ public class PopupFragment extends Fragment{
 
     protected void clearText() {
         editText.setText("");
+    }
+
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        managingActivity.saveSharedPreference("hashtags", parent.getItemAtPosition(position).toString());
+    }
+
+    public void onNothingSelected(AdapterView<?> parent) {
+        managingActivity.saveSharedPreference("hashtags", parent.getItemAtPosition(0).toString());
     }
 }

@@ -85,7 +85,7 @@ public class RogerKeyboardService extends InputMethodService implements Keyboard
     private String getCurrentHashtags() {
 
         SharedPreferences sharedPref = getSharedPreferences(MainActivity.HASHTAG_KEYBOARD_PREF_NAME, 0);
-        roger = sharedPref.getString("hashtags", "#click #edit #button");
+        roger = sharedPref.getString("rogerword", "Roger");
         return (roger);
     }
 

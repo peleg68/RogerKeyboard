@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkIfFirstRun() {
 
         if (getSharedPreferenceInt("firstRun") == 0) {
-            saveSharedPreference("hashtags", defaultHashtagList);
+            saveSharedPreference("rogerword", defaultHashtagList);
             showTutorial();
         }
     }

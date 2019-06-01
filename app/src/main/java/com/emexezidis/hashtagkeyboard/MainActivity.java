@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private PopupFragment popupFragment;
     private SharedPreferences sharedPreferences;
     private String defaultHashtagList = "#you #can #edit #these #hashtags";
-    private String processedText;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -89,28 +88,6 @@ public class MainActivity extends AppCompatActivity {
             // If the Fragment already exists:
             fragmentManager.beginTransaction().replace(android.R.id.content, popupFragment).commit();
         }
-    }
-
-    protected String hashtagifyString(String input) {
-
-        processedText = "";
-
-        String[] stringArray = input.split("\\s+");
-
-        System.out.println("1st Regex: ");
-        for (String string : stringArray) {
-            System.out.println(string);
-        }
-
-        for (String string : stringArray) {
-            if (string.contains("#")) {
-                processedText += (string + " ");
-            } else {
-                processedText += ("#" + string + " ");
-            }
-        }
-
-        return (processedText);
     }
 
     private void checkIfFirstRun() {

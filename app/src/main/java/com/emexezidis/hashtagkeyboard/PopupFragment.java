@@ -39,14 +39,6 @@ public class PopupFragment extends Fragment{
         editText = (EditText) view.findViewById(R.id.saved_hashtags);
         editText.setText(managingActivity.getSharedPreferenceString("hashtags"));
 
-        final Button hashtagify = (Button) view.findViewById(R.id.hashtagifyButton);
-        hashtagify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editText.setText(managingActivity.hashtagifyString(editText.getText().toString()));
-            }
-        });
-
         Button save = (Button) view.findViewById(R.id.saveButton);
         save.setOnClickListener(new View.OnClickListener() {
             @Override

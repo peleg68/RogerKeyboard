@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private PopupFragment popupFragment;
     private SharedPreferences sharedPreferences;
-    private String defaultHashtagList = "#you #can #edit #these #hashtags";
+    private String defaultRogerWord = "Roger";
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkIfFirstRun() {
 
         if (getSharedPreferenceInt("firstRun") == 0) {
-            saveSharedPreference("rogerword", defaultHashtagList);
+            saveSharedPreference("rogerword", defaultRogerWord);
             showTutorial();
         }
     }

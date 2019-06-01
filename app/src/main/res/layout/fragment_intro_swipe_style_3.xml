@@ -30,7 +30,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:maxEms="18"
-            android:text="Click the 'Enable' button. Then, select 'Set-up Input Methods' and enable HashHashHash."
+            android:text="Click the 'Enable' button. Then, select 'Set-up Input Methods' and enable Roger Keyboard."
             android:textSize="20sp"/>
 
         <Button

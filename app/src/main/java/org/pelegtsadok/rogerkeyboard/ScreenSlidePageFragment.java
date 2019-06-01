@@ -1,4 +1,4 @@
-package com.emexezidis.hashtagkeyboard;
+package org.pelegtsadok.rogerkeyboard;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

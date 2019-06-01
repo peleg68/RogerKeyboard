@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:maxEms="18"
-            android:text="This is a keyboard that adds a #hashtag #template in one click."
+            android:text="The keyboard that enables you to disrespect people by acknowleding their messages with \'Roger\'"
             android:textSize="20sp"/>
     </LinearLayout>
 

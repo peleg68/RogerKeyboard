@@ -61,10 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.change_ime) {
             changeIme(false);
-        } else if (item.getItemId() == R.id.clear_text) {
-            if (popupFragment != null) {
-                popupFragment.clearText();
-            }
         }
 
         return super.onOptionsItemSelected(item);

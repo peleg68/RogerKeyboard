@@ -4,6 +4,10 @@
     <string name="subtype_en_US">Hashtagese</string>
     <string name="main_screen_title">Choose your weapon:</string>
     <string name="hashtags_edittext">#hashtags</string>
+    <string-array name="roger_words_array">
+        <item>Roger</item>
+        <item>רות</item>
+    </string-array>
     <string name="save">Save</string>
     <string name="hashtagify_button">Hashtagify</string>
     <string name="title_activity_first_run">FirstRun</string>

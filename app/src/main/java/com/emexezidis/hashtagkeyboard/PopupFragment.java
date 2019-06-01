@@ -7,12 +7,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class PopupFragment extends Fragment{
 
     private EditText editText;
+    private Spinner wordSpinner;
     private MainActivity managingActivity;
 
     @Nullable
@@ -38,6 +41,18 @@ public class PopupFragment extends Fragment{
         managingActivity = ((MainActivity)getActivity());
         editText = (EditText) view.findViewById(R.id.saved_hashtags);
         editText.setText(managingActivity.getSharedPreferenceString("hashtags"));
+
+        wordSpinner = view.findViewById(R.id.word_spinner);
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.roger_words_array,
+                android.R.layout.simple_spinner_item
+        );
+
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        wordSpinner.setAdapter(arrayAdapter);
+
 
         Button save = (Button) view.findViewById(R.id.saveButton);
         save.setOnClickListener(new View.OnClickListener() {

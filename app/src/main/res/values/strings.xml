@@ -5,8 +5,8 @@
     <string name="main_screen_title">Choose your weapon:</string>
     <string name="hashtags_edittext">#hashtags</string>
     <string-array name="roger_words_array">
-        <item>Roger</item>
         <item>רות</item>
+        <item>Roger</item>
     </string-array>
     <string name="save">Save</string>
     <string name="hashtagify_button">Hashtagify</string>

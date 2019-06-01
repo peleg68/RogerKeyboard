@@ -6,8 +6,4 @@
         android:icon="@drawable/ic_keyboard_white_24dp"
         android:title="Change Keyboard"
         app:showAsAction="always"/>
-    <item
-        android:id="@+id/clear_text"
-        android:title="Clear"
-        app:showAsAction="never"/>
 </menu>

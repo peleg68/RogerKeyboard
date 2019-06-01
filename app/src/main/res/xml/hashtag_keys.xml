@@ -1,7 +1,6 @@
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
           android:horizontalGap="0px"
           android:keyHeight="120dp"
-          android:keyWidth="10%p"
           android:verticalGap="0px">
     <Row android:rowEdgeFlags="bottom">
         <Key
@@ -12,7 +11,7 @@
         <Key
             android:codes="257"
             android:keyLabel="רות"
-            android:keyWidth="60%p"/>
+            android:keyWidth="70%p"/>
         <Key
             android:codes="-4"
             android:keyEdgeFlags="right"

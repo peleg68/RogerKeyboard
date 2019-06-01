@@ -90,7 +90,7 @@ public class PopupFragment extends Fragment implements AdapterView.OnItemSelecte
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
-        String defaultRogerword = parent.getItemAtPosition(0).toString()
+        String defaultRogerword = parent.getItemAtPosition(0).toString();
         managingActivity.saveSharedPreference("hashtags", defaultRogerword);
         showSnackbar("Default procedure word `" + defaultRogerword + "`  saved.");
     }

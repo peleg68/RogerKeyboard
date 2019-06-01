@@ -15,7 +15,6 @@ import android.widget.Spinner;
 
 public class PopupFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
-    private EditText editText;
     private Spinner wordSpinner;
     private MainActivity managingActivity;
 
@@ -40,8 +39,6 @@ public class PopupFragment extends Fragment implements AdapterView.OnItemSelecte
         // I use a reference to the calling activity to access its
         // public methods:
         managingActivity = ((MainActivity)getActivity());
-        editText = (EditText) view.findViewById(R.id.saved_hashtags);
-        editText.setText(managingActivity.getSharedPreferenceString("hashtags"));
 
         wordSpinner = view.findViewById(R.id.word_spinner);
         final ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(
@@ -55,16 +52,6 @@ public class PopupFragment extends Fragment implements AdapterView.OnItemSelecte
         wordSpinner.setAdapter(arrayAdapter);
 
         wordSpinner.setOnItemSelectedListener(this);
-
-
-        Button save = (Button) view.findViewById(R.id.saveButton);
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                managingActivity.saveSharedPreference("hashtags", editText.getText().toString());
-                showSnackbar("Hashtag Template Saved.");
-            }
-        });
     }
 
     @Override

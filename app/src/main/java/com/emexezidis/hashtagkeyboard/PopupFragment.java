@@ -68,10 +68,6 @@ public class PopupFragment extends Fragment implements AdapterView.OnItemSelecte
         snackbar.show();
     }
 
-    protected void clearText() {
-        editText.setText("");
-    }
-
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String selectedRogerword = parent.getItemAtPosition(position).toString();
         managingActivity.saveSharedPreference("hashtags", selectedRogerword);

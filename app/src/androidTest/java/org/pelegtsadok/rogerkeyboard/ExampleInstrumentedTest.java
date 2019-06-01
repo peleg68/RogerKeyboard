@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.emexezidis.hashtagkeyboard", appContext.getPackageName());
+        assertEquals("org.pelegtsadok.rogerkeyboard", appContext.getPackageName());
     }
 }

@@ -2,7 +2,7 @@
     <string name="app_name">Roger Keyboard</string>
     <string name="ime_name">Roger Keyboard</string>
     <string name="subtype_en_US">Hashtagese</string>
-    <string name="main_screen_title">Hashtag List:</string>
+    <string name="main_screen_title">Choose your weapon:</string>
     <string name="hashtags_edittext">#hashtags</string>
     <string name="save">Save</string>
     <string name="hashtagify_button">Hashtagify</string>

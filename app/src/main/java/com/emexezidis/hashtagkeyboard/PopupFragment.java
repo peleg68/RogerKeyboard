@@ -51,6 +51,8 @@ public class PopupFragment extends Fragment implements AdapterView.OnItemSelecte
 
         wordSpinner.setAdapter(arrayAdapter);
 
+        wordSpinner.setSelection(0);
+
         wordSpinner.setOnItemSelectedListener(this);
     }
 
